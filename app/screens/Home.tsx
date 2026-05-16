@@ -9,8 +9,10 @@ import {
 
 import { SafeAreaView } from 'react-native-safe-area-context';
 import NavBar from '../components/NavBar';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Home() {
+  const navigation = useNavigation<any>()
   return (
     <SafeAreaView style={styles.container}>
       {/* Header */}
@@ -19,7 +21,11 @@ export default function Home() {
           Meus Shows
         </Text>
 
-        <TouchableOpacity>
+        <TouchableOpacity 
+          onPress={() =>
+              navigation.navigate('NewShow')
+          }        
+        >
           <Text style={styles.plus}>+</Text>
         </TouchableOpacity>
       </View>
