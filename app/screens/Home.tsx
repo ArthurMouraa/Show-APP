@@ -43,17 +43,24 @@ export default function Home() {
           <View style={styles.iconBox}>
             <Text style={styles.icon}>🎤</Text>
           </View>
-
+          
           <View style={styles.cardContent}>
+            <TouchableOpacity
+            onPress={() =>
+              navigation.navigate('ShowDetails')
+            }
+          >
             <Text style={styles.cardTitle}>
               Rock in Rio 2025
             </Text>
+          </TouchableOpacity>
 
             <Text style={styles.cardSubtitle}>
               Rock • 15 Set • Rio de Janeiro
             </Text>
           </View>
         </View>
+
         <View style={styles.card}>
           <View style={styles.iconBox}>
             <Text style={styles.icon}>🎵</Text>
@@ -69,6 +76,7 @@ export default function Home() {
             </Text>
           </View>
         </View>
+
       </View>
       <NavBar/>
     </SafeAreaView>

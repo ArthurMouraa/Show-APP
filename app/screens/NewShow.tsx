@@ -13,17 +13,17 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 export default function NewShow() {
   return (
     <SafeAreaView style={styles.container}>
-      {/* Voltar */}
+      
       <TouchableOpacity style={styles.backButton}>
         <Text style={styles.backArrow}>←</Text>
 
         <Text style={styles.backText}>Voltar</Text>
       </TouchableOpacity>
 
-      {/* Título */}
+     
       <Text style={styles.title}>Novo show</Text>
 
-      {/* Upload Banner */}
+      
       <TouchableOpacity style={styles.bannerUpload}>
         <Text style={styles.bannerIcon}>🖼️</Text>
 
@@ -36,7 +36,7 @@ export default function NewShow() {
         </Text>
       </TouchableOpacity>
 
-      {/* Nome */}
+      
       <Text style={styles.label}>Nome do show</Text>
 
       <TextInput
@@ -45,7 +45,7 @@ export default function NewShow() {
         style={styles.input}
       />
 
-      {/* Linha Data/Hora */}
+      
       <View style={styles.row}>
         <View style={styles.column}>
           <Text style={styles.label}>Data</Text>
@@ -68,7 +68,7 @@ export default function NewShow() {
         </View>
       </View>
 
-      {/* Local */}
+      
       <Text style={styles.label}>Local / cidade</Text>
 
       <TextInput
@@ -77,7 +77,7 @@ export default function NewShow() {
         style={styles.input}
       />
 
-      {/* Gênero */}
+      
       <Text style={styles.label}>Gênero</Text>
 
       <View style={styles.genreContainer}>
@@ -112,7 +112,7 @@ export default function NewShow() {
         </TouchableOpacity>
       </View>
 
-      {/* Botão */}
+      
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>
           Salvar show

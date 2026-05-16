@@ -8,6 +8,7 @@ import Login from '../screens/Login';
 import Cadastro from '../screens/Cadastro';
 import Home from '../screens/Home';
 import NewShow from '../screens/NewShow';
+import ShowDetails from '../screens/ShowDetails';
 
 const Stack = createNativeStackNavigator();
 
@@ -38,6 +39,11 @@ export default function AppRoutes(){
         <Stack.Screen
          name="NewShow"
          component={NewShow}
+        />
+
+        <Stack.Screen
+         name="ShowDetails"
+         component={ShowDetails}
         />
 
       </Stack.Navigator>
