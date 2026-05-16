@@ -28,7 +28,11 @@ export default function NavBar() {
         <Text style={styles.tabIcon}>⌘</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.tabButton}>
+      <TouchableOpacity style={styles.tabButton}
+       onPress={() =>
+          navigation.navigate('Profile')
+        }      
+      >
         <Text style={styles.tabIcon}>◯</Text>
       </TouchableOpacity>
 

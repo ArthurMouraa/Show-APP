@@ -13,9 +13,9 @@ export default function ShowDetails() {
   const navigation = useNavigation<any>();
   return (
     <SafeAreaView style={styles.container}>
-      {/* Card principal */}
+      
       <View style={styles.showCard}>
-        {/* Banner */}
+        
         <View style={styles.banner}>
           <View style={styles.genreBadge}>
             <Text style={styles.genreText}>Rock</Text>
@@ -28,13 +28,13 @@ export default function ShowDetails() {
           </View>
         </View>
 
-        {/* Conteúdo */}
+        
         <View style={styles.content}>
           <Text style={styles.title}>
             Rock in Rio 2025
           </Text>
 
-          {/* Infos */}
+          
           <View style={styles.infoRow}>
             <View style={styles.infoItem}>
               <Text style={styles.infoIcon}>📅</Text>
@@ -61,7 +61,7 @@ export default function ShowDetails() {
             </View>
           </View>
 
-          {/* Ações */}
+          
           <View style={styles.actions}>
             <TouchableOpacity
               style={styles.editButton}
@@ -90,12 +90,12 @@ export default function ShowDetails() {
         </View>
       </View>
 
-      {/* Outros shows */}
+      
       <Text style={styles.sectionTitle}>
         Outros shows
       </Text>
 
-      {/* Card secundário */}
+      
       <TouchableOpacity style={styles.otherCard}>
         <View style={styles.otherIconBox}>
           <Text style={styles.otherIcon}>

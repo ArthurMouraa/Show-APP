@@ -9,6 +9,8 @@ import Cadastro from '../screens/Cadastro';
 import Home from '../screens/Home';
 import NewShow from '../screens/NewShow';
 import ShowDetails from '../screens/ShowDetails';
+import Profile from '../screens/Profile';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -44,6 +46,11 @@ export default function AppRoutes(){
         <Stack.Screen
          name="ShowDetails"
          component={ShowDetails}
+        />
+
+        <Stack.Screen
+         name="Profile"
+         component={Profile}
         />
 
       </Stack.Navigator>
