@@ -117,9 +117,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#050816',
     paddingHorizontal: 28,
     paddingTop: 70,
-    borderStyle: 'solid',
-    borderColor: 'red',
-    borderWidth: 4
   },
 
   logoContainer: {
