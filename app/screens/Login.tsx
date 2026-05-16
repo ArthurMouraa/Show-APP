@@ -7,8 +7,11 @@ import {
 } from 'react-native';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useNavigation } from '@react-navigation/native';
+
 
 export default function Login() {
+  const navigation = useNavigation<any>();
   return (
     <SafeAreaView style={{
       flex: 1,
@@ -17,7 +20,7 @@ export default function Login() {
       paddingHorizontal: 28,
       paddingTop: 50,
     }}>
-      
+
       <View style={styles.logoContainer}>
         <View style={styles.logoBox}>
           <Text style={styles.logoEmoji}>🎭</Text>
@@ -26,7 +29,7 @@ export default function Login() {
         <Text style={styles.logoText}>ShowApp</Text>
       </View>
 
-     
+
       <View style={styles.header}>
         <Text style={styles.title}>Bem-vindo de volta</Text>
 
@@ -92,7 +95,11 @@ export default function Login() {
             Não tem conta?
           </Text>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() =>
+              navigation.navigate('Register')
+            }
+          >
             <Text style={styles.registerLink}>
               {' '}
               Cadastre-se
