@@ -1,6 +1,10 @@
 
 import { useNavigation } from "@react-navigation/native";
 import { StyleSheet, View, TouchableOpacity, Text } from "react-native"
+import { Ionicons } from '@expo/vector-icons';
+import AntDesign from '@expo/vector-icons/AntDesign';
+import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 export default function NavBar() {
   const navigation = useNavigation<any>();
@@ -13,11 +17,21 @@ export default function NavBar() {
           navigation.navigate('Home')
         }
       >
-        <Text style={styles.activeTabIcon}>⌂</Text>
+        <Ionicons
+          name="home"
+          size={28}
+          color="#A855F7"
+        />
+        <Text style={styles.activeTabIcon}>Home</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.tabButton}>
-        <Text style={styles.tabIcon}>⌕</Text>
+      <TouchableOpacity style={styles.tabButton}
+        onPress={() =>
+          navigation.navigate('NewShow')
+        }
+      >
+        <MaterialIcons name="create-new-folder" size={28} color="#A855F7" />
+        <Text style={styles.tabIcon}>Criar</Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.tabButton}
@@ -25,15 +39,17 @@ export default function NavBar() {
           navigation.navigate('ShowDetails')
         }
       >
-        <Text style={styles.tabIcon}>⌘</Text>
+        <AntDesign name="area-chart" size={28} color="#A855F7" />
+        <Text style={styles.tabIcon}>Info</Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.tabButton}
-       onPress={() =>
+        onPress={() =>
           navigation.navigate('Profile')
-        }      
+        }
       >
-        <Text style={styles.tabIcon}>◯</Text>
+        <FontAwesome5 name="user-circle" size={28} color="#A855F7" />
+        <Text style={styles.tabIcon}>Perfil</Text>
       </TouchableOpacity>
 
     </View>
@@ -53,11 +69,11 @@ const styles = StyleSheet.create({
   },
   activeTabIcon: {
     color: '#A855F7',
-    fontSize: 28,
+    fontSize: 12,
   },
   tabIcon: {
     color: '#64748B',
-    fontSize: 28,
+    fontSize: 12,
   },
   tabButton: {
     justifyContent: 'center',

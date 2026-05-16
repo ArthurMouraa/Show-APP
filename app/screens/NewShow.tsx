@@ -6,6 +6,8 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from 'react-native';
+import { ScrollView } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -13,6 +15,9 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 export default function NewShow() {
   return (
     <SafeAreaView style={styles.container}>
+    <ScrollView
+    showsVerticalScrollIndicator={false}
+    >
       
       <TouchableOpacity style={styles.backButton}>
         <Text style={styles.backArrow}>←</Text>
@@ -118,6 +123,7 @@ export default function NewShow() {
           Salvar show
         </Text>
       </TouchableOpacity>
+    </ScrollView>
     </SafeAreaView>
   );
 }
@@ -128,6 +134,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#050816',
     paddingHorizontal: 24,
     paddingTop: 10,
+
+    borderColor: 'red',
+    borderWidth: 2,
+    borderStyle: 'solid'
   },
 
   backButton: {
@@ -163,7 +173,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#1A1F37',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 24,
+    marginBottom: 9,
+    
   },
 
   bannerIcon: {
@@ -205,6 +216,9 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     gap: 12,
+    borderColor: 'red',
+    borderWidth: 2,
+    borderStyle: 'solid'
   },
 
   column: {
@@ -227,7 +241,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     gap: 10,
-    marginTop: 6,
+    marginTop: 4,
+    marginBottom: 20,
+    borderColor: 'red',
+    borderWidth: 2,
+    borderStyle: 'solid'
   },
 
   activeGenre: {
