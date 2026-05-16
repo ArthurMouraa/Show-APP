@@ -6,6 +6,7 @@ import {
 
 import Login from '../screens/Login';
 import Cadastro from '../screens/Cadastro';
+import Home from '../screens/Home';
 
 const Stack = createNativeStackNavigator();
 
@@ -27,6 +28,12 @@ export default function AppRoutes(){
           name="Register"
           component={Cadastro}
         />
+
+        <Stack.Screen
+         name="Home"
+         component={Home}
+        />
+        
       </Stack.Navigator>
     </NavigationContainer>
   )
